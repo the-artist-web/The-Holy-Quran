@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- #META TAGS -->
+        <title>القران الكريم</title>
+        <meta name="title" content="القران الكريم موقع القرآن أذكار تفسيرات"/>
+        <meta name="description" content="موقع القرآن الخاص بك يعتبر مرجعًا شاملاً للمسلمين، حيث يوفر مجموعة واسعة من الخدمات والمحتوى الديني المفيد. يشمل الموقع قسمًا خاصًا للأذكار، حيث يمكن للمستخدمين العثور على مجموعة من الأذكار والأدعية التي يمكنهم استخدامها في مختلف الأوقات والمواقف. كما يحتوي الموقع أيضًا على تفسيرات للقرآن الكريم، تسهل على القراء فهم معاني الآيات وتطبيقها في حياتهم اليومية. وبالإضافة إلى ذلك، يوفر الموقع قسمًا مخصصًا لقراءة القرآن الكريم عبر الإنترنت، مما يتيح للمستخدمين الاستماع إلى التلاوات بمختلف القراءات الشهيرة والتأمل في كلمات الله بسهولة ويسر. تصميم الموقع يسهل التنقل والوصول إلى المحتوى المطلوب بسرعة، مما يجعل تجربة الاستخدام سهلة وممتعة لكل مستخدم"/>
+        <!-- #FAVICON -->
+        <link rel="icon" href="./favicon.png">
+        <!-- #GOOGLE FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <!-- #CUSTOM CDNJS LINK -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <!-- #CUSTOM CSS LINK -->
+        <link rel="stylesheet" href="./assets/css/styles.css">
+    </head>
+    <body id="up">
+        <!-- #HEADER -->
+        <header class="header" data-header>
+            <a href="index.html" class="logo">
+                <img src="./favicon.png" alt="logo" loading="lazy" width="150" height="150" class="img-logo img-cover">
+                <span>القران الكريم</span>
+            </a>
+            
+            <ul class="navbar-list">
+                <li class="navbar-item">
+                    <a href="index.html" class="navbar-link active">الصفحه الرئيسيه</a>
+                </li>
+                
+                <li class="navbar-item">
+                    <a href="display.html" class="navbar-link">قران اذكار تفسير</a>
+                </li>
+            </ul>
+            
+            <div class="header-btn">
+                <button class="btn-mood">
+                    <i class="fa-regular fa-sun sun" data-sun></i>
+                    <i class="fa-regular fa-moon moon" data-moon></i>
+                </button>
+                
+                <a href="save-box.html" class="btn-save">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                    <span>السور المحفوظه</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- #NAVBAR MOBILE -->
+        <nav class="navbar-mobile">
+            <ul class="navbar-mobile-list">
+                <li class="navbar-mobile-item">
+                    <a href="display.html" class="navbvar-mobile-link">
+                        <i class="fa-solid fa-book-quran"></i>
+                        <span>قران اذكار تفسير</span>
+                    </a>
+                </li>
+                
+                <li class="navbar-mobile-item">
+                    <a href="index.html" class="navbvar-mobile-link active">
+                        <i class="fa-solid fa-house"></i>
+                        <span>الصفحه الرئيسيه</span>
+                    </a>
+                </li>
+                
+                <li class="navbar-mobile-item">
+                    <a href="save-box.html" class="navbvar-mobile-link">
+                        <i class="fa-solid fa-book-bookmark"></i>
+                        <span>السور المحفوظه</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <article>
+                <!-- #HERO -->
+                <section class="hero">
+                    <figure>
+                        <img src="./assets/image/bg-mobile-home.jpg" alt="bg mobile home" class="bg-mobile-home img-cover">
+                        <img src="./assets/image/bg-desctop-home.jpg" alt="bg mobile home" class="bg-desctop-home img-cover">
+                    </figure>
+
+                    <div class="hero-content">
+                        <h1>مذا تريد ان تقرأ</h1>
+
+                        <div class="from" data-form>
+                            <button class="btn-search" data-btn-search>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+
+                            <input type="text" placeholder="بحث..." class="search" data-search>
+
+                            <i class="fa-solid fa-book-quran quran"></i>
+                        </div>
+
+                        <p>لا تنسي ان تقرا وردك اليومي</p>
+                    </div>
+                </section>
+
+                <!-- #BOX LIST -->
+                <section class="box-list">
+                    <div class="container">
+                        <div class="tabs-list">
+                            <button class="tab-btn active" data-tab-btn-Surah>سوره</button>
+                            <button class="tab-btn" data-tab-btn-part>جزء</button>
+                            <button class="tab-btn" data-tab-btn-Remembrance>اذكار</button>
+                        </div>
+
+                        <ul class="box-grid" data-box-grid-1></ul>
+
+                        <ul class="box-grid grid-2" data-box-grid-2></ul>
+                        
+                        <ul class="box-grid grid-3" data-box-grid-3></ul>
+                    </div>
+                </section>
+                
+                <!-- #TAGS -->
+                <section class="tags section">
+                    <div class="container">
+                        <h1 class="title">اختر قراءتك المفضله</h1>
+
+                        <div class="tags-list">
+                            <a href="display.html?query=سوره الفتاحه" class="tag-link">سوره الفتاحه</a>
+
+                            <a href="display.html?query=سوره البقره" class="tag-link">سوره البقره</a>
+
+                            <a href="display.html?query=سوره ال عمران" class="tag-link">سوره ال عمران</a>
+
+                            <a href="display.html?query=سوره النساء" class="tag-link">سوره النساء</a>
+
+                            <a href="display.html?query=سوره المائده" class="tag-link">سوره المائده</a>
+
+                            <a href="display.html?query=سوره الانعام" class="tag-link">سوره الانعام</a>
+
+                            <a href="display.html?query=سوره الاعراف" class="tag-link">سوره الاعراف</a>
+
+                            <a href="display.html?query=سوره الانفال" class="tag-link">سوره الانفال</a>
+
+                            <a href="display.html?query=سوره التوبه" class="tag-link">سوره التوبه</a>
+
+                            <a href="display.html?query=سوره يونس" class="tag-link">سوره يونس</a>
+
+                            <a href="display.html?query=سوره هود" class="tag-link">سوره هود</a>
+
+                            <a href="display.html?query=سوره يوسف" class="tag-link">سوره يوسف</a>
+
+                            <a href="display.html?query=سوره الرعد" class="tag-link">سوره الرعد</a>
+
+                            <a href="display.html?query=سوره ابراهيم" class="tag-link">سوره ابراهيم</a>
+
+                            <a href="display.html?query=سوره الحجر" class="tag-link">سوره الحجر</a>
+
+                            <a href="display.html?query=سوره النحل" class="tag-link">سوره النحل</a>
+
+                            <a href="display.html?query=سوره الاسراء" class="tag-link">سوره الاسراء</a>
+
+                            <a href="display.html?query=سوره الكهف" class="tag-link">سوره الكهف</a>
+
+                            <a href="display.html?query=سوره مريم" class="tag-link">سوره مريم</a>
+
+                            <a href="display.html?query=سوره طه" class="tag-link">سوره طه</a>
+
+                            <a href="display.html?query=سوره الانبياء" class="tag-link">سوره الانبياء</a>
+
+                            <a href="display.html?query=سوره الحج" class="tag-link">سوره الحج</a>
+
+                            <a href="display.html?query=سوره المؤمنون" class="tag-link">سوره المؤمنون</a>
+
+                            <a href="display.html?query=سوره النور" class="tag-link">سوره النور</a>
+
+                            <a href="display.html?query=سوره الفرفان" class="tag-link">سوره الفرفان</a>
+
+                            <a href="display.html?query=سوره الشعراء" class="tag-link">سوره الشعراء</a>
+
+                            <a href="display.html?query=سوره النمل" class="tag-link">سوره النمل</a>
+
+                            <a href="display.html?query=سوره القصص" class="tag-link">سوره القصص</a>
+
+                            <a href="display.html?query=سوره العنكبوت" class="tag-link">سوره العنكبوت</a>
+
+                            <a href="display.html?query=سوره الروم" class="tag-link">سوره الروم</a>
+
+                            <a href="display.html?query=سوره لقمان" class="tag-link">سوره لقمان</a>
+
+                            <a href="display.html?query=سوره السجده" class="tag-link">سوره السجده</a>
+
+                            <a href="display.html?query=سوره الاحزاب" class="tag-link">سوره الاحزاب</a>
+
+                            <a href="display.html?query=سوره سبا" class="tag-link">سوره سبا</a>
+
+                            <a href="display.html?query=سوره فاطر" class="tag-link">سوره فاطر</a>
+
+                            <a href="display.html?query=سوره يس" class="tag-link">سوره يس</a>
+
+                            <a href="display.html?query=سوره الصافات" class="tag-link">سوره الصافات</a>
+
+                            <a href="display.html?query=سوره ص" class="tag-link">سوره ص</a>
+
+                            <a href="display.html?query=سوره الزمر" class="tag-link">سوره الزمر</a>
+
+                            <a href="display.html?query=سوره غافر" class="tag-link">سوره غافر</a>
+
+                            <a href="display.html?query=سوره فصلت" class="tag-link">سوره فصلت</a>
+
+                            <a href="display.html?query=سوره الشوري" class="tag-link">سوره الشوري</a>
+
+                            <a href="display.html?query=سوره الزخرف" class="tag-link">سوره الزخرف</a>
+
+                            <a href="display.html?query=سوره الدخان" class="tag-link">سوره الدخان</a>
+
+                            <a href="display.html?query=سوره الجاثيه" class="tag-link">سوره الجاثيه</a>
+
+                            <a href="display.html?query=سوره الاحقاف" class="tag-link">سوره الاحقاف</a>
+
+                            <a href="display.html?query=سوره محمد" class="tag-link">سوره محمد</a>
+
+                            <a href="display.html?query=سوره الفتح" class="tag-link">سوره الفتح</a>
+
+                            <a href="display.html?query=سوره الحجرات" class="tag-link">سوره الحجرات</a>
+
+                            <a href="display.html?query=سوره ق" class="tag-link">سوره ق</a>
+
+                            <a href="display.html?query=سوره الذاريات" class="tag-link">سوره الذاريات</a>
+
+                            <a href="display.html?query=سوره الطور" class="tag-link">سوره الطور</a>
+
+                            <a href="display.html?query=سوره النجم" class="tag-link">سوره النجم</a>
+
+                            <a href="display.html?query=سوره القمر" class="tag-link">سوره القمر</a>
+
+                            <a href="display.html?query=سوره الرحمان" class="tag-link">سوره الرحمان</a>
+
+                            <a href="display.html?query=سوره الواقعه" class="tag-link">سوره الواقعه</a>
+
+                            <a href="display.html?query=سوره الحديد" class="tag-link">سوره الحديد</a>
+
+                            <a href="display.html?query=سوره المجادله" class="tag-link">سوره المجادله</a>
+
+                            <a href="display.html?query=سوره الحشر" class="tag-link">سوره الحشر</a>
+
+                            <a href="display.html?query=سوره الممتحنه" class="tag-link">سوره الممتحنه</a>
+
+                            <a href="display.html?query=سوره الصف" class="tag-link">سوره الصف</a>
+
+                            <a href="display.html?query=سوره الجمعه" class="tag-link">سوره الجمعه</a>
+
+                            <a href="display.html?query=سوره المنافقون" class="tag-link">سوره المنافقون</a>
+
+                            <a href="display.html?query=سوره التغابن" class="tag-link">سوره التغابن</a>
+
+                            <a href="display.html?query=سوره الطلاق" class="tag-link">سوره الطلاق</a>
+
+                            <a href="display.html?query=سوره التحريم" class="tag-link">سوره التحريم</a>
+
+                            <a href="display.html?query=سوره الملك" class="tag-link">سوره الملك</a>
+
+                            <a href="display.html?query=سوره القلم" class="tag-link">سوره القلم</a>
+
+                            <a href="display.html?query=سوره الحاقه" class="tag-link">سوره الحاقه</a>
+
+                            <a href="display.html?query=سوره المعارج" class="tag-link">سوره المعارج</a>
+
+                            <a href="display.html?query=سوره نوح" class="tag-link">سوره نوح</a>
+
+                            <a href="display.html?query=سوره الجن" class="tag-link">سوره الجن</a>
+
+                            <a href="display.html?query=سوره المذمل" class="tag-link">سوره المذمل</a>
+
+                            <a href="display.html?query=سوره المدثر" class="tag-link">سوره المدثر</a>
+
+                            <a href="display.html?query=سوره القيامه" class="tag-link">سوره القيامه</a>
+
+                            <a href="display.html?query=سوره الانسان" class="tag-link">سوره الانسان</a>
+
+                            <a href="display.html?query=سوره المرسلات" class="tag-link">سوره المرسلات</a>
+
+                            <a href="display.html?query=سوره النبا" class="tag-link">سوره النبا</a>
+
+                            <a href="display.html?query=سوره النازعات" class="tag-link">سوره النازعات</a>
+
+                            <a href="display.html?query=سوره عبس" class="tag-link">سوره عبس</a>
+
+                            <a href="display.html?query=سوره التكوير" class="tag-link">سوره التكوير</a>
+
+                            <a href="display.html?query=سوره الانفطار" class="tag-link">سوره الانفطار</a>
+
+                            <a href="display.html?query=سوره المطففين" class="tag-link">سوره المطففين</a>
+
+                            <a href="display.html?query=سوره الانشقاق" class="tag-link">سوره الانشقاق</a>
+
+                            <a href="display.html?query=سوره البروج" class="tag-link">سوره البروج</a>
+
+                            <a href="display.html?query=سوره الطارق" class="tag-link">سوره الطارق</a>
+
+                            <a href="display.html?query=سوره الاعلي" class="tag-link">سوره الاعلي</a>
+
+                            <a href="display.html?query=سوره الغاشيه" class="tag-link">سوره الغاشيه</a>
+
+                            <a href="display.html?query=سوره الفجر" class="tag-link">سوره الفجر</a>
+
+                            <a href="display.html?query=سوره البلد" class="tag-link">سوره البلد</a>
+
+                            <a href="display.html?query=سوره الشمس" class="tag-link">سوره الشمس</a>
+
+                            <a href="display.html?query=سوره الليل" class="tag-link">سوره الليل</a>
+
+                            <a href="display.html?query=سوره الضحي" class="tag-link">سوره الضحي</a>
+
+                            <a href="display.html?query=سوره الشرح" class="tag-link">سوره الشرح</a>
+
+                            <a href="display.html?query=سوره التين" class="tag-link">سوره التين</a>
+
+                            <a href="display.html?query=سوره العلق" class="tag-link">سوره العلق</a>
+
+                            <a href="display.html?query=سوره القدر" class="tag-link">سوره القدر</a>
+
+                            <a href="display.html?query=سوره البينه" class="tag-link">سوره البينه</a>
+
+                            <a href="display.html?query=سوره الزلزله" class="tag-link">سوره الزلزله</a>
+
+                            <a href="display.html?query=سوره العاديات" class="tag-link">سوره العاديات</a>
+
+                            <a href="display.html?query=سوره القارعه" class="tag-link">سوره القارعه</a>
+
+                            <a href="display.html?query=سوره التكاثر" class="tag-link">سوره التكاثر</a>
+
+                            <a href="display.html?query=سوره العصر" class="tag-link">سوره العصر</a>
+
+                            <a href="display.html?query=سوره الهمزه" class="tag-link">سوره الهمزه</a>
+
+                            <a href="display.html?query=سوره الفيل" class="tag-link">سوره الفيل</a>
+
+                            <a href="display.html?query=سوره قريش" class="tag-link">سوره قريش</a>
+
+                            <a href="display.html?query=سوره الماعون" class="tag-link">سوره الماعون</a>
+
+                            <a href="display.html?query=سوره الكوثر" class="tag-link">سوره الكوثر</a>
+
+                            <a href="display.html?query=سوره الكافرون" class="tag-link">سوره الكافرون</a>
+
+                            <a href="display.html?query=سوره النصر" class="tag-link">سوره النصر</a>
+
+                            <a href="display.html?query=سوره المسد" class="tag-link">سوره المسد</a>
+
+                            <a href="display.html?query=سوره الاخلاص" class="tag-link">سوره الاخلاص</a>
+
+                            <a href="display.html?query=سوره الفلق" class="tag-link">سوره الفلق</a>
+
+                            <a href="display.html?query=سوره الناس" class="tag-link">سوره الناس</a>
+
+                            <a href="display.html?query=دعاء ختم القران الكريم" class="tag-link">دعاء ختم القران الكريم</a>
+
+                            <a href="display.html?query=اذكار الصباح" class="tag-link">اذكار الصباح</a>
+
+                            <a href="display.html?query=اذكار المساء" class="tag-link">اذكار المساء</a>
+
+                            <a href="display.html?query=حصن المسلم" class="tag-link">حصن المسلم</a>
+
+                            <a href="display.html?query=الجزء الاول" class="tag-link">الجزء الاول</a>
+
+                            <a href="display.html?query=الجزء الثاني" class="tag-link">الجزء الثاني</a>
+
+                            <a href="display.html?query=الجزء الثالث" class="tag-link">الجزء الثالث</a>
+
+                            <a href="display.html?query=الجزء الرابع" class="tag-link">الجزء الرابع</a>
+
+                            <a href="display.html?query=الجزء الخامس" class="tag-link">الجزء الخامس</a>
+
+                            <a href="display.html?query=الجزء السادس" class="tag-link">الجزء السادس</a>
+
+                            <a href="display.html?query=الجزء السابع" class="tag-link">الجزء السابع</a>
+
+                            <a href="display.html?query=الجزء الثامن" class="tag-link">الجزء الثامن</a>
+
+                            <a href="display.html?query=الجزء التاسع" class="tag-link">الجزء التاسع</a>
+
+                            <a href="display.html?query=الجزء العاشر" class="tag-link">الجزء العاشر</a>
+
+                            <a href="display.html?query=الجزء الاحدي عشر" class="tag-link">الجزء الاحدي عشر</a>
+
+                            <a href="display.html?query=الجزء الثاني عشر" class="tag-link">الجزء الثاني عشر</a>
+
+                            <a href="display.html?query=الجزء الثالث عشر" class="tag-link">الجزء الثالث عشر</a>
+
+                            <a href="display.html?query=الجزء الرابع عشر" class="tag-link">الجزء الرابع عشر</a>
+
+                            <a href="display.html?query=الجزء الخامس عشر" class="tag-link">الجزء الخامس عشر</a>
+
+                            <a href="display.html?query=الجزء السادس عشر" class="tag-link">الجزء السادس عشر</a>
+
+                            <a href="display.html?query=الجزء السابع عشر" class="tag-link">الجزء السابع عشر</a>
+
+                            <a href="display.html?query=الجزء الثامن عشر" class="tag-link">الجزء الثامن عشر</a>
+
+                            <a href="display.html?query=الجزء التاسع عشر" class="tag-link">الجزء التاسع عشر</a>
+
+                            <a href="display.html?query=الجزء العشرون" class="tag-link">الجزء العشرون</a>
+
+                            <a href="display.html?query=الجزء الحدي و العشرون" class="tag-link">الجزء الحدي و العشرون</a>
+
+                            <a href="display.html?query=الجزء الثاني و العشرون" class="tag-link">الجزء الثاني و العشرون</a>
+
+                            <a href="display.html?query=الجزء الثالث و العشرون" class="tag-link">الجزء الثالث و العشرون</a>
+
+                            <a href="display.html?query=الجزء الرابع و العشرون" class="tag-link">الجزء الرابع و العشرون</a>
+
+                            <a href="display.html?query=الجزء الخامس و العشرون" class="tag-link">الجزء الخامس و العشرون</a>
+
+                            <a href="display.html?query=الجزء السادس و العشرون" class="tag-link">الجزء السادس و العشرون</a>
+
+                            <a href="display.html?query=الجزء السابع و العشرون" class="tag-link">الجزء السابع و العشرون</a>
+
+                            <a href="display.html?query=الجزء الثامن و العشرون" class="tag-link">الجزء الثامن و العشرون</a>
+
+                            <a href="display.html?query=الجزء التاسع و العشرون" class="tag-link">الجزء التاسع و العشرون</a>
+
+                            <a href="display.html?query=الجزء الثلاثون" class="tag-link">الجزء الثلاثون</a>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>
+
+        <!-- #FOOTER -->
+        <footer class="footer" id="down">
+            <a href="index.html" class="logo">
+                <img src="./favicon.png" alt="logo" loading="lazy" width="150" height="150" class="img-logo img-cover">
+                <span>القران الكريم</span>
+            </a>
+
+            <p class="category">
+                &copy; القران الكريم 2024
+            </p>
+        </footer>
+
+        <!-- #BACK TOP BTN AND BACK BOTTOM BTN -->
+        <div class="btn-top-and-bottom" data-btn-top-and-bottom>
+            <a href="#up" class="back-btn">
+                <i class="fa-solid fa-angle-up"></i>
+            </a>
+
+            <a href="#down" class="back-btn">
+                <i class="fa-solid fa-angle-down"></i>
+            </a>
+        </div>
+        
+        <!-- #CUSTOM JS LINK -->
+        <script src="./assets/js/home.js"></script>
+        <script src="./assets/js/theme.js"></script>
+    </body>
+</html>

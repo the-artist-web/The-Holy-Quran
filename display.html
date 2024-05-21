@@ -1,0 +1,33 @@
+<!--
+    function displaySurahs(surahs) {
+        const surahList = document.getElementById('surahList');
+        surahList.innerHTML = '';
+
+        if (surahs.length === 0) {
+            surahList.innerHTML = '<p>لا توجد سور مطابقة.</p>';
+            return;
+        }
+
+        surahs.forEach(surah => {
+            const surahItem = document.createElement('div');
+            surahItem.innerHTML = `
+                <h2>${surah.name}</h2>
+                <p>${surah.description}</p>
+            `;
+            surahList.appendChild(surahItem);
+        });
+    }
+
+    // Fetch and display surahs on page load
+    window.onload = () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('query') ? decodeURIComponent(urlParams.get('query')).toLowerCase() : '';
+
+        fetch('surahs.json')
+            .then(response => response.json())
+            .then(data => {
+                const filteredSurahs = data.surahs.filter(surah => surah.name.toLowerCase().includes(query));
+                displaySurahs(filteredSurahs);
+            });
+    };
+-->
