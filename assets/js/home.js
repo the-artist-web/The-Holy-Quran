@@ -52,25 +52,37 @@ tabBtnSurah.addEventListener("click", () => {
     boxGrid2.innerHTML = ``;
     boxGrid3.innerHTML = ``;
 
+    // إضافة محتوى متكرر إلى boxGrid1
     boxGrid1.innerHTML = `
         ${boxZena.repeat(14)}
     `;
 
+    // استخدام setTimeout لتأخير تنفيذ الجلب (fetch)
     setTimeout(() => {
+        // إفراغ محتوى boxGrid1
         boxGrid1.innerHTML = ``;
 
+        // جلب البيانات من data.json
         fetch("data.json")
-        .then(response => response.json()) 
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
         .then(data => {
-            for (let i = 0; i < data.quran.length; i++) {
-                boxGrid1.innerHTML += `
+            let content = ''; // متغير لتجميع المحتوى
+
+            // حلقة لإضافة البيانات إلى المحتوى
+            data.quran.forEach(item => {
+                content += `
                 <li class="box">
-                    <a href="./display.html?query=${data.quran[i].link}">
-                        <p class="id">${data.quran[i].id}</p>
-                        <h3 class="title">${data.quran[i].title}</h3>
+                    <a href="./display.html?query=${item.link}">
+                        <p class="id">${item.id}</p>
+                        <h3 class="title">${item.title}</h3>
                     </a>
                     <div class="box-bottom">
-                        <p class="ayat">${data.quran[i].ayat}</p>
+                        <p class="ayat">${item.ayat}</p>
         
                         <button class="bookmark bookmark-off" data-bookmark-off>
                             <i class="fa-regular fa-bookmark"></i>
@@ -82,9 +94,16 @@ tabBtnSurah.addEventListener("click", () => {
                     </div>
                 </li>
                 `;
-            };
+            });
+
+            // تعيين المحتوى المجمع إلى boxGrid1.innerHTML
+            boxGrid1.innerHTML = content;
+        })
+        .catch(error => {
+            console.error('Fetch error:', error);
+            // يمكنك هنا إضافة معالجة للأخطاء، مثل عرض رسالة للمستخدم
         });
-    });
+    }, 200);
 });
 
 tabBtnPart.addEventListener("click", () => {
@@ -99,39 +118,58 @@ tabBtnPart.addEventListener("click", () => {
     boxGrid1.innerHTML = ``;
     boxGrid3.innerHTML = ``;
 
+    // إضافة محتوى متكرر إلى boxGrid1
     boxGrid2.innerHTML = `
         ${boxZena.repeat(14)}
     `;
 
+    // استخدام setTimeout لتأخير تنفيذ الجلب (fetch)
     setTimeout(() => {
+        // إفراغ محتوى boxGrid1
         boxGrid2.innerHTML = ``;
 
+        // جلب البيانات من data.json
         fetch("data.json")
-        .then(response => response.json()) 
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
         .then(data => {
-            for (let i = 0; i < data.part.length; i++) {
-                boxGrid2.innerHTML += `
+            let content = ''; // متغير لتجميع المحتوى
+
+            // حلقة لإضافة البيانات إلى المحتوى
+            data.part.forEach(item => {
+                content += `
                 <li class="box">
-                    <a href="./display.html?query=${data.part[i].link}">
-                        <p class="id">${data.part[i].id}</p>
-                        <h3 class="title">${data.part[i].title}</h3>
+                    <a href="./display.html?query=${item.link}">
+                        <p class="id">${item.id}</p>
+                        <h3 class="title">${item.title}</h3>
                     </a>
                     <div class="box-bottom">
-                        <p class="ayat">${data.part[i].ayat}</p>
-      
+                        <p class="ayat">${item.ayat}</p>
+        
                         <button class="bookmark bookmark-off" data-bookmark-off>
                             <i class="fa-regular fa-bookmark"></i>
                         </button>
-      
+        
                         <button class="bookmark bookmark-on" data-bookmark-on>
                             <i class="fa-solid fa-bookmark"></i>
                         </button>
                     </div>
                 </li>
                 `;
-            };
+            });
+
+            // تعيين المحتوى المجمع إلى boxGrid1.innerHTML
+            boxGrid2.innerHTML = content;
+        })
+        .catch(error => {
+            console.error('Fetch error:', error);
+            // يمكنك هنا إضافة معالجة للأخطاء، مثل عرض رسالة للمستخدم
         });
-    });
+    }, 200);
 });
 
 tabBtnRemembrance.addEventListener("click", () => {
@@ -146,59 +184,91 @@ tabBtnRemembrance.addEventListener("click", () => {
     boxGrid1.innerHTML = ``;
     boxGrid2.innerHTML = ``;
 
+    // إضافة محتوى متكرر إلى boxGrid1
     boxGrid3.innerHTML = `
         ${boxZena.repeat(14)}
     `;
 
+    // استخدام setTimeout لتأخير تنفيذ الجلب (fetch)
     setTimeout(() => {
+        // إفراغ محتوى boxGrid1
         boxGrid3.innerHTML = ``;
 
+        // جلب البيانات من data.json
         fetch("data.json")
-        .then(response => response.json()) 
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
         .then(data => {
-            for (let i = 0; i < data.Remembrance.length; i++) {
-                boxGrid3.innerHTML += `
+            let content = ''; // متغير لتجميع المحتوى
+
+            // حلقة لإضافة البيانات إلى المحتوى
+            data.Remembrance.forEach(item => {
+                content += `
                 <li class="box">
-                    <a href="./display.html?query=${data.Remembrance[i].link}">
-                        <p class="id">${data.Remembrance[i].id}</p>
-                        <h3 class="title">${data.Remembrance[i].title}</h3>
+                    <a href="./display.html?query=${item.link}">
+                        <p class="id">${item.id}</p>
+                        <h3 class="title">${item.title}</h3>
                     </a>
                     <div class="box-bottom">
-                        <p class="ayat">${data.Remembrance[i].ayat}</p>
-    
+                        <p class="ayat">${item.ayat}</p>
+        
                         <button class="bookmark bookmark-off" data-bookmark-off>
                             <i class="fa-regular fa-bookmark"></i>
                         </button>
+        
                         <button class="bookmark bookmark-on" data-bookmark-on>
                             <i class="fa-solid fa-bookmark"></i>
                         </button>
                     </div>
                 </li>
                 `;
-            };
+            });
+
+            // تعيين المحتوى المجمع إلى boxGrid1.innerHTML
+            boxGrid3.innerHTML = content;
+        })
+        .catch(error => {
+            console.error('Fetch error:', error);
+            // يمكنك هنا إضافة معالجة للأخطاء، مثل عرض رسالة للمستخدم
         });
-    });
+    }, 200);
 });
 
+// إضافة محتوى متكرر إلى boxGrid1
 boxGrid1.innerHTML = `
     ${boxZena.repeat(14)}
 `;
 
+// استخدام setTimeout لتأخير تنفيذ الجلب (fetch)
 setTimeout(() => {
+    // إفراغ محتوى boxGrid1
     boxGrid1.innerHTML = ``;
 
+    // جلب البيانات من data.json
     fetch("data.json")
-    .then(response => response.json()) 
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json();
+    })
     .then(data => {
-        for (let i = 0; i < data.quran.length; i++) {
-            boxGrid1.innerHTML += `
+        let content = ''; // متغير لتجميع المحتوى
+
+        // حلقة لإضافة البيانات إلى المحتوى
+        data.quran.forEach(item => {
+            content += `
             <li class="box">
-                <a href="./display.html?query=${data.quran[i].link}">
-                    <p class="id">${data.quran[i].id}</p>
-                    <h3 class="title">${data.quran[i].title}</h3>
+                <a href="./display.html?query=${item.link}">
+                    <p class="id">${item.id}</p>
+                    <h3 class="title">${item.title}</h3>
                 </a>
                 <div class="box-bottom">
-                    <p class="ayat">${data.quran[i].ayat}</p>
+                    <p class="ayat">${item.ayat}</p>
     
                     <button class="bookmark bookmark-off" data-bookmark-off>
                         <i class="fa-regular fa-bookmark"></i>
@@ -210,6 +280,13 @@ setTimeout(() => {
                 </div>
             </li>
             `;
-        };
+        });
+
+        // تعيين المحتوى المجمع إلى boxGrid1.innerHTML
+        boxGrid1.innerHTML = content;
+    })
+    .catch(error => {
+        console.error('Fetch error:', error);
+        // يمكنك هنا إضافة معالجة للأخطاء، مثل عرض رسالة للمستخدم
     });
 }, 200);
