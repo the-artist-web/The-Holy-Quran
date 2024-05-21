@@ -483,7 +483,7 @@ body {
   background-color: var(--bg-color);
   margin: 0 0 16px;
   position: sticky;
-  top: 70px;
+  top: 69px;
   z-index: 9;
 }
 
