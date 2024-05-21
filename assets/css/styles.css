@@ -516,6 +516,53 @@ body {
   gap: 10px;
 }
 
+.box-zena {
+  padding: 12px;
+  position: relative;
+}
+
+.box-zena .id-zena {
+  height: 35px;
+  width: 35px;
+  border-radius: 100px;
+  background-color: var(--second-color);
+  margin-bottom: 15px;
+  animation: box-zena 500ms linear infinite alternate;
+}
+
+.box-zena .title-zena {
+  height: 20px;
+  width: 110px;
+  border-radius: 100px;
+  background-color: var(--second-color);
+  margin-bottom: 20px;
+  animation: box-zena 500ms linear infinite alternate;
+}
+
+.box-zena .box-bottom-zena {
+  height: 21px;
+  width: 50px;
+  border-radius: 100px;
+  background-color: var(--second-color);
+  animation: box-zena 500ms linear infinite alternate;
+}
+
+.box-zena .bookmark-zena {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  height: 30px;
+  width: 30px;
+  border-radius: 100px;
+  background-color: var(--second-color);
+  animation: box-zena 500ms linear infinite alternate;
+}
+
+@keyframes box-zena {
+  0% { opacity: 0.2; }
+  100% { opacity: 0.4; }
+}
+
 .box-grid .box {
   background-color: var(--second-bg-color);
   padding: 12px;

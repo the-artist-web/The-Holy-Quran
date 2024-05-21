@@ -31,6 +31,15 @@ const boxGrid1 = document.querySelector("[data-box-grid-1]");
 const boxGrid2 = document.querySelector("[data-box-grid-2]");
 const boxGrid3 = document.querySelector("[data-box-grid-3]");
 
+let boxZena = `
+<li class="box-zena">
+    <div class="id-zena"></div>
+    <div class="title-zena"></div>
+    <div class="box-bottom-zena"></div>
+    <div class="bookmark-zena"></div>
+</li>
+`;
+
 tabBtnSurah.addEventListener("click", () => {
     tabBtnSurah.classList.add("active");
     tabBtnPart.classList.remove("active");
@@ -43,7 +52,14 @@ tabBtnSurah.addEventListener("click", () => {
     boxGrid2.innerHTML = ``;
     boxGrid3.innerHTML = ``;
 
-    fetch("data.json")
+    boxGrid1.innerHTML = `
+        ${boxZena.repeat(14)}
+    `;
+
+    setTimeout(() => {
+        boxGrid1.innerHTML = ``;
+
+        fetch("data.json")
         .then(response => response.json()) 
         .then(data => {
             for (let i = 0; i < data.quran.length; i++) {
@@ -67,6 +83,7 @@ tabBtnSurah.addEventListener("click", () => {
                 </li>
                 `;
             };
+        });
     });
 });
 
@@ -82,30 +99,38 @@ tabBtnPart.addEventListener("click", () => {
     boxGrid1.innerHTML = ``;
     boxGrid3.innerHTML = ``;
 
-    fetch("data.json")
-      .then(response => response.json()) 
-      .then(data => {
-          for (let i = 0; i < data.part.length; i++) {
-              boxGrid2.innerHTML += `
-              <li class="box">
-                  <a href="./display.html?query=${data.part[i].link}">
-                      <p class="id">${data.part[i].id}</p>
-                      <h3 class="title">${data.part[i].title}</h3>
-                  </a>
-                  <div class="box-bottom">
-                      <p class="ayat">${data.part[i].ayat}</p>
-    
-                      <button class="bookmark bookmark-off" data-bookmark-off>
-                          <i class="fa-regular fa-bookmark"></i>
-                      </button>
-    
-                      <button class="bookmark bookmark-on" data-bookmark-on>
-                          <i class="fa-solid fa-bookmark"></i>
-                      </button>
-                  </div>
-              </li>
-              `;
-          };
+    boxGrid2.innerHTML = `
+        ${boxZena.repeat(14)}
+    `;
+
+    setTimeout(() => {
+        boxGrid2.innerHTML = ``;
+
+        fetch("data.json")
+        .then(response => response.json()) 
+        .then(data => {
+            for (let i = 0; i < data.part.length; i++) {
+                boxGrid2.innerHTML += `
+                <li class="box">
+                    <a href="./display.html?query=${data.part[i].link}">
+                        <p class="id">${data.part[i].id}</p>
+                        <h3 class="title">${data.part[i].title}</h3>
+                    </a>
+                    <div class="box-bottom">
+                        <p class="ayat">${data.part[i].ayat}</p>
+      
+                        <button class="bookmark bookmark-off" data-bookmark-off>
+                            <i class="fa-regular fa-bookmark"></i>
+                        </button>
+      
+                        <button class="bookmark bookmark-on" data-bookmark-on>
+                            <i class="fa-solid fa-bookmark"></i>
+                        </button>
+                    </div>
+                </li>
+                `;
+            };
+        });
     });
 });
 
@@ -121,22 +146,64 @@ tabBtnRemembrance.addEventListener("click", () => {
     boxGrid1.innerHTML = ``;
     boxGrid2.innerHTML = ``;
 
+    boxGrid3.innerHTML = `
+        ${boxZena.repeat(14)}
+    `;
+
+    setTimeout(() => {
+        boxGrid3.innerHTML = ``;
+
+        fetch("data.json")
+        .then(response => response.json()) 
+        .then(data => {
+            for (let i = 0; i < data.Remembrance.length; i++) {
+                boxGrid3.innerHTML += `
+                <li class="box">
+                    <a href="./display.html?query=${data.Remembrance[i].link}">
+                        <p class="id">${data.Remembrance[i].id}</p>
+                        <h3 class="title">${data.Remembrance[i].title}</h3>
+                    </a>
+                    <div class="box-bottom">
+                        <p class="ayat">${data.Remembrance[i].ayat}</p>
+    
+                        <button class="bookmark bookmark-off" data-bookmark-off>
+                            <i class="fa-regular fa-bookmark"></i>
+                        </button>
+                        <button class="bookmark bookmark-on" data-bookmark-on>
+                            <i class="fa-solid fa-bookmark"></i>
+                        </button>
+                    </div>
+                </li>
+                `;
+            };
+        });
+    });
+});
+
+boxGrid1.innerHTML = `
+    ${boxZena.repeat(14)}
+`;
+
+setTimeout(() => {
+    boxGrid1.innerHTML = ``;
+
     fetch("data.json")
     .then(response => response.json()) 
     .then(data => {
-        for (let i = 0; i < data.Remembrance.length; i++) {
-            boxGrid3.innerHTML += `
+        for (let i = 0; i < data.quran.length; i++) {
+            boxGrid1.innerHTML += `
             <li class="box">
-                <a href="./display.html?query=${data.Remembrance[i].link}">
-                    <p class="id">${data.Remembrance[i].id}</p>
-                    <h3 class="title">${data.Remembrance[i].title}</h3>
+                <a href="./display.html?query=${data.quran[i].link}">
+                    <p class="id">${data.quran[i].id}</p>
+                    <h3 class="title">${data.quran[i].title}</h3>
                 </a>
                 <div class="box-bottom">
-                    <p class="ayat">${data.Remembrance[i].ayat}</p>
-
+                    <p class="ayat">${data.quran[i].ayat}</p>
+    
                     <button class="bookmark bookmark-off" data-bookmark-off>
                         <i class="fa-regular fa-bookmark"></i>
                     </button>
+    
                     <button class="bookmark bookmark-on" data-bookmark-on>
                         <i class="fa-solid fa-bookmark"></i>
                     </button>
@@ -145,30 +212,4 @@ tabBtnRemembrance.addEventListener("click", () => {
             `;
         };
     });
-});
-
-fetch("data.json")
-.then(response => response.json()) 
-.then(data => {
-    for (let i = 0; i < data.quran.length; i++) {
-        boxGrid1.innerHTML += `
-        <li class="box">
-            <a href="./display.html?query=${data.quran[i].link}">
-                <p class="id">${data.quran[i].id}</p>
-                <h3 class="title">${data.quran[i].title}</h3>
-            </a>
-            <div class="box-bottom">
-                <p class="ayat">${data.quran[i].ayat}</p>
-
-                <button class="bookmark bookmark-off" data-bookmark-off>
-                    <i class="fa-regular fa-bookmark"></i>
-                </button>
-
-                <button class="bookmark bookmark-on" data-bookmark-on>
-                    <i class="fa-solid fa-bookmark"></i>
-                </button>
-            </div>
-        </li>
-        `;
-    };
-});
+}, 200);
