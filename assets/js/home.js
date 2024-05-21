@@ -54,7 +54,7 @@ tabBtnSurah.addEventListener("click", () => {
 
     // إضافة محتوى متكرر إلى boxGrid1
     boxGrid1.innerHTML = `
-        ${boxZena.repeat(14)}
+        ${boxZena.repeat(20)}
     `;
 
     // استخدام setTimeout لتأخير تنفيذ الجلب (fetch)
@@ -103,7 +103,7 @@ tabBtnSurah.addEventListener("click", () => {
             console.error('Fetch error:', error);
             // يمكنك هنا إضافة معالجة للأخطاء، مثل عرض رسالة للمستخدم
         });
-    }, 200);
+    }, 300);
 });
 
 tabBtnPart.addEventListener("click", () => {
@@ -120,7 +120,7 @@ tabBtnPart.addEventListener("click", () => {
 
     // إضافة محتوى متكرر إلى boxGrid1
     boxGrid2.innerHTML = `
-        ${boxZena.repeat(14)}
+        ${boxZena.repeat(20)}
     `;
 
     // استخدام setTimeout لتأخير تنفيذ الجلب (fetch)
@@ -169,7 +169,7 @@ tabBtnPart.addEventListener("click", () => {
             console.error('Fetch error:', error);
             // يمكنك هنا إضافة معالجة للأخطاء، مثل عرض رسالة للمستخدم
         });
-    }, 200);
+    }, 300);
 });
 
 tabBtnRemembrance.addEventListener("click", () => {
@@ -186,7 +186,7 @@ tabBtnRemembrance.addEventListener("click", () => {
 
     // إضافة محتوى متكرر إلى boxGrid1
     boxGrid3.innerHTML = `
-        ${boxZena.repeat(14)}
+        ${boxZena.repeat(20)}
     `;
 
     // استخدام setTimeout لتأخير تنفيذ الجلب (fetch)
@@ -235,12 +235,12 @@ tabBtnRemembrance.addEventListener("click", () => {
             console.error('Fetch error:', error);
             // يمكنك هنا إضافة معالجة للأخطاء، مثل عرض رسالة للمستخدم
         });
-    }, 200);
+    }, 300);
 });
 
 // إضافة محتوى متكرر إلى boxGrid1
 boxGrid1.innerHTML = `
-    ${boxZena.repeat(14)}
+    ${boxZena.repeat(20)}
 `;
 
 // استخدام setTimeout لتأخير تنفيذ الجلب (fetch)
@@ -289,4 +289,4 @@ setTimeout(() => {
         console.error('Fetch error:', error);
         // يمكنك هنا إضافة معالجة للأخطاء، مثل عرض رسالة للمستخدم
     });
-}, 200);
+}, 300);
