@@ -1,4 +1,17 @@
 /**
+ * #HEADER
+ */
+const header = document.querySelector("[data-header]");
+
+window.addEventListener("scroll", () => {
+    if (scrollY >= 100) {
+        header.classList.add("active");
+    } else {
+        header.classList.remove("active");
+    };
+});
+
+/**
  * #DARK MOOD
  */
 const HTML = document.documentElement;
