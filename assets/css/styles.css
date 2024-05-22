@@ -847,7 +847,7 @@ body {
   background-color: var(--second-bg-color);
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
   padding: 5px 8px;
   border-radius: 100px;
 }
@@ -1022,7 +1022,7 @@ aside-list-guza { display: none; }
 .display-title {
   font-size: 20px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   border-top: 2px solid var(--second-bg-color);
   padding-top: 20px;
   animation: fade-in 500ms .1s forwards;
@@ -1032,9 +1032,9 @@ aside-list-guza { display: none; }
   font-family: conv_original-hafs;
   text-align: justify;
   text-align-last: center;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.8;
   margin: 0 0 20px;
   padding-inline: 12px;
   max-width: 1000px;
@@ -1152,6 +1152,46 @@ h1 .title-zena {
   margin: 0 auto 10px;
   animation: box-zena 500ms linear infinite alternate;
 }
+
+
+
+
+
+/*///////////////////////////////////////*\
+  STYLES.CSS ========> AZKAR.HTML
+\*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+/**
+ * GO STYLE PAGE AZKAR.HTML
+ */
+
+
+
+
+
+
+
+
+
+/*--------------------------------------*\
+  #HERO AZKAR
+\*--------------------------------------*/
+
+
+
+
+
+
+
+
+
+/*--------------------------------------*\
+  #AZKAR LIST
+\*--------------------------------------*/
+
+
+
+
 
 
 

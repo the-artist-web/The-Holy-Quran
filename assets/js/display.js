@@ -14,6 +14,11 @@ const asideListSura = document.querySelector("[data-aside-list-sura]");
 const searchSura = document.querySelector("[data-search-sura]");
 const asideListGuza = document.querySelector("[data-aside-list-guza]");
 const searchGuza = document.querySelector("[data-search-guza]");
+
+const btnAzkar = document.querySelector("[data-btn-azkar]");
+const asideListAzkar = document.querySelector("[data-aside-list-azkar]");
+const searchAzkar = document.querySelector("[data-search-azkar]");
+
 const btnShowAside = document.querySelector("[data-btn-show-aside]");
 
 const tagLink = document.querySelectorAll(".tag-link");
@@ -21,16 +26,30 @@ const tagLink = document.querySelectorAll(".tag-link");
 btnSura.addEventListener("click", () => {
     btnSura.classList.add("active");
     btnGuza.classList.remove("active");
+    btnAzkar.classList.remove("active");
 
     asideListSura.style.display = "flex";
     asideListGuza.style.display = "none";
+    asideListAzkar.style.display = "none";
 });
 
 btnGuza.addEventListener("click", () => {
     btnGuza.classList.add("active");
     btnSura.classList.remove("active");
+    btnAzkar.classList.remove("active");
     
     asideListGuza.style.display = "flex";
+    asideListSura.style.display = "none";
+    asideListAzkar.style.display = "none";
+});
+
+btnAzkar.addEventListener("click", () => {
+    btnAzkar.classList.add("active");
+    btnGuza.classList.remove("active");
+    btnSura.classList.remove("active");
+    
+    asideListAzkar.style.display = "flex";
+    asideListGuza.style.display = "none";
     asideListSura.style.display = "none";
 });
 
@@ -65,6 +84,17 @@ searchSura.addEventListener('input', () => {
 
 searchGuza.addEventListener('input', () => {
     const query = searchGuza.value.toLowerCase();
+    for (let i = 0; i < tagLink.length; i++) {
+        if (tagLink[i].innerHTML.toLowerCase().indexOf(query) >= 0) {
+            tagLink[i].style.display = "";
+        } else {
+            tagLink[i].style.display = "none";
+        }
+    }
+});
+
+searchAzkar.addEventListener('input', () => {
+    const query = searchAzkar.value.toLowerCase();
     for (let i = 0; i < tagLink.length; i++) {
         if (tagLink[i].innerHTML.toLowerCase().indexOf(query) >= 0) {
             tagLink[i].style.display = "";
