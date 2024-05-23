@@ -2,7 +2,6 @@
  * #HEADER
  */
 const header = document.querySelector("[data-header]");
-
 window.addEventListener("scroll", () => {
     if (scrollY >= 100) {
         header.classList.add("active");

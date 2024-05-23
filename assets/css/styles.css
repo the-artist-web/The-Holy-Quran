@@ -847,14 +847,14 @@ body {
   background-color: var(--second-bg-color);
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 5px 8px;
+  gap: 5px;
+  padding: 5px;
   border-radius: 100px;
 }
 
 .aside .container .aside-top .aside-box-top .btn {
   font-size: 18px;
-  padding: 10px 12px;
+  padding: 8px 12px;
   border-radius: 100px;
   transition: .4s;
   width: 70px;
@@ -1132,7 +1132,6 @@ aside-list-guza { display: none; }
 h1 .title-zena {
   height: 20px;
   width: 150px;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1152,46 +1151,6 @@ h1 .title-zena {
   margin: 0 auto 10px;
   animation: box-zena 500ms linear infinite alternate;
 }
-
-
-
-
-
-/*///////////////////////////////////////*\
-  STYLES.CSS ========> AZKAR.HTML
-\*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
-
-/**
- * GO STYLE PAGE AZKAR.HTML
- */
-
-
-
-
-
-
-
-
-
-/*--------------------------------------*\
-  #HERO AZKAR
-\*--------------------------------------*/
-
-
-
-
-
-
-
-
-
-/*--------------------------------------*\
-  #AZKAR LIST
-\*--------------------------------------*/
-
-
-
-
 
 
 

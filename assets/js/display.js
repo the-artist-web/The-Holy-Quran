@@ -171,62 +171,59 @@ pushContent.innerHTML = `
 <p class="sura-zena"></p>
 `;
 
-setTimeout(() => {
+fetch("data.json")
+.then(response => {
+    if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+    }
+    return response.json();
+})
+.then(data => {
     pushContent.innerHTML = ``;
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('query') ? decodeURIComponent(urlParams.get('query')).toLowerCase() : '';
 
-    fetch("data.json")
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok ' + response.statusText);
-        }
-        return response.json();
-    })
-    .then(data => {
-        const urlParams = new URLSearchParams(window.location.search);
-        const query = urlParams.get('query') ? decodeURIComponent(urlParams.get('query')).toLowerCase() : '';
+    const filteredSurahs = data.display.filter(display => display.title.toLowerCase().includes(query));
 
-        const filteredSurahs = data.display.filter(display => display.title.toLowerCase().includes(query));
-
-        filteredSurahs.forEach(item => {
-            pushContent.innerHTML += `
-            <div class="home">
-                <div class="container">
-                    <figure>
-                        <img src="${item.image}" alt="${item.title}" loading="lazy" class="home-img img-cover">
-                    </figure>
-        
-                    <div class="home-content">
-                        <div class="home-title">
-                            <h1 class="title">${item.title}</h1>
-        
-                            <div class="boxs-saved">
-                                <button class="bookmark bookmark-off" data-bookmark-off>
-                                    <span>save</span>
-                                    <i class="fa-regular fa-bookmark"></i>
-                                </button>
-        
-                                <button class="bookmark bookmark-on" data-bookmark-on>
-                                    <span>unsaved</span>
-                                    <i class="fa-solid fa-bookmark"></i>
-                                </button>
-                            </div>
+    filteredSurahs.forEach(item => {
+        pushContent.innerHTML += `
+        <div class="home">
+            <div class="container">
+                <figure>
+                    <img src="${item.image}" alt="${item.title}" loading="lazy" class="home-img img-cover">
+                </figure>
+    
+                <div class="home-content">
+                    <div class="home-title">
+                        <h1 class="title">${item.title}</h1>
+    
+                        <div class="boxs-saved">
+                            <button class="bookmark bookmark-off" data-bookmark-off>
+                                <span>save</span>
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+    
+                            <button class="bookmark bookmark-on" data-bookmark-on>
+                                <span>unsaved</span>
+                                <i class="fa-solid fa-bookmark"></i>
+                            </button>
                         </div>
-        
-                        <div class="home-bottom">
-                            <p>${item.ayat}</p>
-                        </div>
-        
-                        <h2 class="title-description">معلومات عنها:</h2>
-                        <p class="description">${item.description}</p>
                     </div>
+    
+                    <div class="home-bottom">
+                        <p>${item.ayat}</p>
+                    </div>
+    
+                    <h2 class="title-description">معلومات عنها:</h2>
+                    <p class="description">${item.description}</p>
                 </div>
             </div>
-        
-            <h1 class="display-title">بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ</h1>
-        
-            <p class="sura">${item.sura}</p>
-            `;
-        });
-    })
-    .catch(error => { console.error('Fetch error:', error); });
-}, 300);
+        </div>
+    
+        <h1 class="display-title">بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ</h1>
+    
+        <p class="sura">${item.sura}</p>
+        `;
+    });
+})
+.catch(error => { console.error('Fetch error:', error); });
