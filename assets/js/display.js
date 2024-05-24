@@ -222,3 +222,53 @@ fetch("data.json")
     });
 })
 .catch(error => { console.error('Fetch error:', error); });
+
+/**
+ * color changing
+ */
+const colorChanging = document.querySelector("[data-color-changing]");
+const colorChangingText = document.querySelector("[data-color-text-changing]");
+const spinner = document.querySelector("[data-spinner]");
+const text = document.querySelector("[data-text]");
+const fillDrip = document.querySelector("[data-fill-drip]");
+
+document.addEventListener("DOMContentLoaded", function() {
+    const bgColor = localStorage.getItem("bgColor");
+    const textColor = localStorage.getItem("textColor");
+
+    if (bgColor) {
+        document.body.style.backgroundColor = bgColor;
+        colorChanging.value = bgColor;
+    }
+
+    if (textColor) {
+        document.body.style.color = textColor;
+        colorChangingText.value = textColor;
+    }
+});
+
+colorChanging.addEventListener("input", function() {
+    let selectedColor = colorChanging.value;
+    document.body.style.backgroundColor = selectedColor;
+    
+    localStorage.setItem("bgColor", selectedColor);
+});
+
+colorChangingText.addEventListener("input", function() {
+    let selectedColor = colorChangingText.value;
+    document.body.style.color = selectedColor;
+    
+    localStorage.setItem("textColor", selectedColor);
+});
+
+spinner.addEventListener("click", () => {
+    document.body.style.backgroundColor = "var(--bg-color)";
+    document.body.style.color = "var(--text-color)";
+    
+    localStorage.removeItem("bgColor");
+    localStorage.removeItem("textColor");
+});
+
+text.addEventListener("click", () => { colorChangingText.click(); });
+
+fillDrip.addEventListener("click", () => { colorChanging.click(); });

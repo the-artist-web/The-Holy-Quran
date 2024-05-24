@@ -235,26 +235,20 @@ body {
 \*--------------------------------------*/
 
 .header {
+  border-bottom: 2px solid var(--second-bg-color);
+  background-color: var(--bg-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-inline: 12px;
   position: fixed;
-  background-color: transparent;
   top: 0;
   right: 0;
   left: 0;
   height: 70px;
   width: 100%;
   transition: .4s;
-  border-bottom: 2px solid transparent;
   z-index: 10;
-}
-
-.header.active {
-  border-bottom: 2px solid var(--second-bg-color);
-  background-color: var(--bg-color);
-  transition: .4s;
 }
 
 .header .logo {
@@ -1160,6 +1154,32 @@ h1 .title-zena {
 
 
 
+/*--------------------------------------*\
+  #COLOR CHANGING
+\*--------------------------------------*/
+
+.form-color {
+  backdrop-filter: blur(35px);
+  border: 2px solid var(--text-color);
+  padding: 12px;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: fixed;
+  top: 150px;
+  right: 12px;
+  z-index: 11;
+}
+
+.form-color i { cursor: pointer; }
+
+.form-color .color-changing { display: none; }
+
+
+
+
 
 /*//////////////////////////////////////*\
   #MEDIA PAGES ALL HTML 
@@ -1271,6 +1291,8 @@ h1 .title-zena {
     bottom: 20px;
     right: 20px;
   }
+
+  .form-color { right: 20px; }
 
   /*///////////////////////////////////////*\
     STYLES.CSS ========> DISPLAY.HTML
