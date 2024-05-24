@@ -199,13 +199,8 @@ fetch("data.json")
     
                         <div class="boxs-saved">
                             <button class="bookmark bookmark-off" data-bookmark-off>
-                                <span>save</span>
-                                <i class="fa-regular fa-bookmark"></i>
-                            </button>
-    
-                            <button class="bookmark bookmark-on" data-bookmark-on>
-                                <span>unsaved</span>
-                                <i class="fa-solid fa-bookmark"></i>
+                                ${item.icon}
+                                <span>${item.nameIcon}</span>
                             </button>
                         </div>
                     </div>

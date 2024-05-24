@@ -63,13 +63,9 @@ tabBtnSurah.addEventListener("click", () => {
                     </a>
                     <div class="box-bottom">
                         <p class="ayat">${item.ayat}</p>
-        
-                        <button class="bookmark bookmark-off" data-bookmark-off>
-                            <i class="fa-regular fa-bookmark"></i>
-                        </button>
-        
-                        <button class="bookmark bookmark-on" data-bookmark-on>
-                            <i class="fa-solid fa-bookmark"></i>
+
+                        <button class="bookmark">
+                            ${item.icon}
                         </button>
                     </div>
                 </li>
@@ -119,13 +115,9 @@ tabBtnPart.addEventListener("click", () => {
                 </a>
                 <div class="box-bottom">
                     <p class="ayat">${item.ayat}</p>
-    
-                    <button class="bookmark bookmark-off" data-bookmark-off>
-                        <i class="fa-regular fa-bookmark"></i>
-                    </button>
-    
-                    <button class="bookmark bookmark-on" data-bookmark-on>
-                        <i class="fa-solid fa-bookmark"></i>
+
+                    <button class="bookmark">
+                        ${item.icon}
                     </button>
                 </div>
             </li>
@@ -175,13 +167,9 @@ tabBtnRemembrance.addEventListener("click", () => {
                 </a>
                 <div class="box-bottom">
                     <p class="ayat">${item.ayat}</p>
-    
-                    <button class="bookmark bookmark-off" data-bookmark-off>
-                        <i class="fa-regular fa-bookmark"></i>
-                    </button>
-    
-                    <button class="bookmark bookmark-on" data-bookmark-on>
-                        <i class="fa-solid fa-bookmark"></i>
+
+                    <button class="bookmark">
+                        ${item.icon}
                     </button>
                 </div>
             </li>
@@ -220,12 +208,8 @@ fetch("data.json")
             <div class="box-bottom">
                 <p class="ayat">${item.ayat}</p>
 
-                <button class="bookmark bookmark-off" data-bookmark-off>
-                    <i class="fa-regular fa-bookmark"></i>
-                </button>
-
-                <button class="bookmark bookmark-on" data-bookmark-on>
-                    <i class="fa-solid fa-bookmark"></i>
+                <button class="bookmark">
+                    ${item.icon}
                 </button>
             </div>
         </li>

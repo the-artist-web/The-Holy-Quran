@@ -167,6 +167,8 @@ body {
   object-fit: cover;
 }
 
+.title-top { padding-bottom: 30px; }
+
 
 
 
@@ -586,12 +588,12 @@ body {
   }
 }
 
-.box-grid .box:where(:hover, :focus-visible) {
+.box:where(:hover, :focus-visible) {
   box-shadow: 0 0 5px var(--text-color);
   transition: .4s;
 }
 
-.box-grid .box .id {
+.box .id {
   font-size: 15px;
   font-weight: 400;
   height: 35px;
@@ -604,21 +606,21 @@ body {
   margin-bottom: 10px;
 }
 
-.box-grid .box .title {
+.box .title {
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 8px;
   line-height: 1.5;
 }
 
-.box-grid .box .box-bottom {
+.box .box-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
 }
 
-.box-grid .box .box-bottom .ayat {
+.box .box-bottom .ayat {
   font-size: 16px;
   color: var(--second-color);
   line-height: 1.5;
@@ -638,15 +640,10 @@ body {
 }
 
 .bookmark:where(:hover, :focus-visible) {
-  background-color: var(--main-color);
+  background-color: red;
+  color: var(--bg-color);
   transition: .4s;
 }
-
-.bookmark-off.active { display: none; }
-
-.bookmark-on { display: none; }
-
-.bookmark-on.active { display: block; }
 
 .grid-2 { display: none; }
 
@@ -1152,33 +1149,13 @@ h1 .title-zena {
   animation: box-zena 500ms linear infinite alternate;
 }
 
-
-
-
-
-/*///////////////////////////////////////*\
-  STYLES.CSS ========> SAVE-BOX.HTML
-\*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
-
-/**
- * GO STYLE PAGE SAVE-BOX.HTML
- */
-
-
-
-
-
-
-
-
-
-/*--------------------------------------*\
-  #SAVE BOX LIST
-\*--------------------------------------*/
-
-
-
-
+.saved-off {
+  height: 80vh;
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--second-color);
+}
 
 
 
