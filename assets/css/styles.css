@@ -1162,6 +1162,7 @@ h1 .title-zena {
   backdrop-filter: blur(35px);
   border: 2px solid var(--text-color);
   padding: 12px;
+  width: 40px;
   border-radius: 100px;
   display: flex;
   flex-direction: column;
@@ -1241,7 +1242,7 @@ h1 .title-zena {
   }
 
   .sura {
-    font-size: 22px;
+    font-size: 2em;
     font-weight: 500;
   }
 

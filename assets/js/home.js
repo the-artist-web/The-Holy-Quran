@@ -4,7 +4,7 @@
 const btnSearch = document.querySelector("[data-btn-search]");
 const query = document.querySelector("[data-search]");
 
-btnSearch.addEventListener('click', () => { if (query.value) window.location.href = `display.html?query=${encodeURIComponent(query.value.toLowerCase())}`; });
+btnSearch.addEventListener('click', () => { if (query.value) window.location.href = `display.html?query=${encodeURIComponent(query.value.trim().toLowerCase())}`; });
 
 query.addEventListener('keydown', e => { if (e.key == "Enter") btnSearch.click(); });
 
