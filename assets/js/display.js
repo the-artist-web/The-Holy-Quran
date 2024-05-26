@@ -72,7 +72,7 @@ overflow.addEventListener("click", () => {
 });
 
 searchSura.addEventListener('input', () => {
-    const query = searchSura.value.toLowerCase();
+    const query = searchSura.value.trim().toLowerCase();
     for (let i = 0; i < tagLink.length; i++) {
         if (tagLink[i].innerHTML.toLowerCase().indexOf(query) >= 0) {
             tagLink[i].style.display = "";
@@ -83,7 +83,7 @@ searchSura.addEventListener('input', () => {
 });
 
 searchGuza.addEventListener('input', () => {
-    const query = searchGuza.value.toLowerCase();
+    const query = searchGuza.value.trim().toLowerCase();
     for (let i = 0; i < tagLink.length; i++) {
         if (tagLink[i].innerHTML.toLowerCase().indexOf(query) >= 0) {
             tagLink[i].style.display = "";
@@ -94,7 +94,7 @@ searchGuza.addEventListener('input', () => {
 });
 
 searchAzkar.addEventListener('input', () => {
-    const query = searchAzkar.value.toLowerCase();
+    const query = searchAzkar.value.trim().toLowerCase();
     for (let i = 0; i < tagLink.length; i++) {
         if (tagLink[i].innerHTML.toLowerCase().indexOf(query) >= 0) {
             tagLink[i].style.display = "";
